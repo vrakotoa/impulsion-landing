@@ -1,26 +1,65 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import ProblemSection from '../components/ProblemSection.astro';
-import ComparisonSection from '../components/ComparisonSection.astro';
-import BenefitsSection from '../components/BenefitsSection.astro';
-import ProgramSection from '../components/ProgramSection.astro';
-import OfferSection from '../components/OfferSection.astro';
-import AboutSection from '../components/AboutSection.astro';
-import FAQSection from '../components/FAQSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="Impulsion — Mastermind pour solopreneures" description="Rejoins le groupe d'avancement qui donne un écho à tes décisions quand tu portes seule ton activité.">
+<BaseLayout title="Véro Rakotoarisoa — Accompagnement marketing et coaching pour solopreneures" description="Coach personnelle et stratège marketing. J'accompagne les solopreneures qui portent seules leur activité à structurer leur offre et avancer en confiance.">
   <Header />
-  <Hero />
-  <ProblemSection />
-  <ComparisonSection />
-  <BenefitsSection />
-  <ProgramSection />
-  <OfferSection />
-  <AboutSection />
-  <FAQSection />
+
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-32 px-6 overflow-hidden" style="background: radial-gradient(at top left, rgba(245, 239, 228, 0.8), transparent 50%), radial-gradient(at bottom right, rgba(252, 238, 242, 0.8), transparent 50%)">
+    <div class="max-w-4xl mx-auto text-center z-10 relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 shadow-sm mb-8">
+        <span class="flex h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
+        <span class="text-xs font-medium uppercase tracking-wider text-stone-500">Coach personnelle & stratège marketing</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl text-stone-900 tracking-tight mb-8 leading-none font-normal font-serif" style="font-family: 'Newsreader', serif">
+        Véro Rakotoarisoa
+      </h1>
+      <p class="text-xl md:text-2xl tracking-tight max-w-xl mx-auto mb-10 leading-relaxed text-stone-800 font-medium">
+        J'accompagne les solopreneures qui portent seules leur activité à structurer leur offre et avancer en confiance.
+      </p>
+      <a href="https://tidycal.com/verorakotoarisoa/30-minute-call" class="inline-flex px-10 py-5 text-white rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 items-center justify-center gap-2 group max-w-md mx-auto w-full sm:w-auto font-bold uppercase tracking-widest text-base bg-primary hover:bg-primary-dark shadow-primary/30">
+        Réserver un appel de 30 min
+        <iconify-icon icon="solar:arrow-right-linear" class="text-xl group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+      </a>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white border-b border-stone-200">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl tracking-tight text-center text-stone-900 mb-16 font-normal font-serif" style="font-family: 'Newsreader', serif;">Ce que je propose</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <a href="/mastermind-impulsion" class="group border p-8 rounded-2xl bg-white border-stone-200 shadow-lg hover:border-primary/30 transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <iconify-icon icon="solar:users-group-rounded-bold" class="text-3xl text-primary"></iconify-icon>
+            <h3 class="text-xl font-bold text-stone-900">Mastermind Impulsion</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-stone-600">Un groupe d'avancement pour solopreneures. 3 participantes maximum, 4 mois d'accompagnement continu pour structurer ton offre et avancer en confiance.</p>
+          <span class="inline-flex items-center gap-1 text-primary font-medium text-sm mt-4 group-hover:gap-2 transition-all">Découvrir <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon></span>
+        </a>
+        <a href="/podcast" class="group border p-8 rounded-2xl bg-white border-stone-200 shadow-lg hover:border-gold/30 transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-4">
+            <iconify-icon icon="solar:microphone-3-bold" class="text-3xl text-gold"></iconify-icon>
+            <h3 class="text-xl font-bold text-stone-900">Podcast</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-stone-600">Après le bruit, le podcast qui donne du relief à tes décisions de solopreneure. Épisodes disponibles sur toutes les plateformes.</p>
+          <span class="inline-flex items-center gap-1 text-gold font-medium text-sm mt-4 group-hover:gap-2 transition-all">Écouter <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-stone-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl tracking-tight text-stone-900 mb-6 font-normal font-serif" style="font-family: 'Newsreader', serif;">Reste informée</h2>
+      <p class="text-stone-600 leading-relaxed mb-8">Rejoins la newsletter pour recevoir mes réflexions, conseils et ressources dédiés aux solopreneures qui veulent avancer à leur rythme.</p>
+      <a href="https://apreslebruit.substack.com" target="_blank" rel="noopener" class="inline-flex px-10 py-5 text-white rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 items-center justify-center gap-2 group max-w-md mx-auto w-full sm:w-auto font-bold uppercase tracking-widest text-base bg-primary hover:bg-primary-dark shadow-primary/30">
+        S'inscrire à la newsletter
+        <iconify-icon icon="solar:letter-bold" class="text-xl"></iconify-icon>
+      </a>
+    </div>
+  </section>
+
   <Footer />
 </BaseLayout>
