@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Ressources — Vero Rakotoarisoa" description="Articles et réflexions sur la transition du milieu de vie, l'entrepreneuriat et la vitalité après 40 ans.">
+  <Header />
+
+  <section class="pt-32 pb-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-4xl md:text-5xl tracking-tight text-stone-900 font-normal font-serif" style="font-family: 'Newsreader', serif;">Les Ressources</h1>
+      <p class="text-stone-600 leading-relaxed mt-4 max-w-2xl">Articles et réflexions pour clarifier votre transition, retrouver votre élan et avancer avec justesse.</p>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        {articles.map((article) => {
+          const slug = article.id.replace('.md', '');
+          return (
+            <a href={`/ressources/${slug}`} class="group border p-8 rounded-2xl bg-white border-stone-200 shadow-lg hover:border-primary/30 transition-all hover:-translate-y-1">
+              <div class="flex flex-wrap gap-2 mb-4">
+                {article.data.tags.map((tag: string) => (
+                  <span class="text-xs font-medium uppercase tracking-wider text-stone-500 bg-stone-100 px-2 py-1 rounded-full">{tag}</span>
+                ))}
+              </div>
+              <h3 class="text-xl font-bold text-stone-900 mb-3">{article.data.title}</h3>
+              <p class="text-sm leading-relaxed text-stone-600 mb-4">{article.data.description}</p>
+              <span class="inline-flex items-center gap-1 text-primary font-medium text-sm group-hover:gap-2 transition-all">Lire la suite <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon></span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

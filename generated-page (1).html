@@ -1,0 +1,390 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet">
+    <style>
+      .sim-scroll::-webkit-scrollbar { width: 4px; }
+      .sim-scroll::-webkit-scrollbar-track { background: transparent; }
+      .sim-scroll::-webkit-scrollbar-thumb { background-color: #E7E5E4; border-radius: 20px; }
+      @keyframes bounce1 { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1); } }
+      @keyframes bounce2 { 0%, 100% { transform: scaleY(0.8); } 50% { transform: scaleY(1.2); } }
+      @keyframes bounce3 { 0%, 100% { transform: scaleY(0.4); } 50% { transform: scaleY(1); } }
+    </style>
+  </head>
+  <body class="antialiased min-h-screen flex flex-col overflow-x-hidden text-[#111111] selection:bg-[#FCEEF2] selection:text-[#D96C8A] bg-[#FFFFFF]" style="font-family: 'Inter', sans-serif; scroll-behavior: smooth;">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md border-b border-stone-100/50 bg-[#FFFFFF]/80">
+      <div class="px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center text-[#FDFCF8] shadow-sm bg-[#5F6B45]">
+            <iconify-icon icon="solar:leaf-linear" class="text-lg"></iconify-icon>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="hidden md:flex items-center gap-6 text-sm text-stone-500 font-normal">
+            <a href="#podcast" class="hover:text-stone-900 transition-colors">
+              Podcast
+            </a>
+            <a href="#philosophie" class="hover:text-stone-900 transition-colors">
+              Philosophie
+            </a>
+            <a href="#newsletter" class="hover:text-stone-900 transition-colors">
+              Articles
+            </a>
+            <a href="#services" class="hover:text-stone-900 transition-colors">
+              Services
+            </a>
+          </div>
+          <a href="#services" class="text-[#111111] bg-[#F5EFE4] hover:bg-[#C6922E] hover:text-white px-4 py-2 rounded-lg text-sm transition-colors font-bold uppercase tracking-wider">
+            Me contacter
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 px-6 overflow-hidden flex items-center" style="background: radial-gradient(at top left, rgba(245, 239, 228, 0.8), transparent 50%), radial-gradient(at bottom right, rgba(252, 238, 242, 0.8), transparent 50%);">
+      <div class="mx-auto w-full items-center relative z-10 flex flex-col text-center max-w-4xl">
+        <div class="flex flex-col items-center w-full">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 shadow-sm mb-8">
+            <span class="flex h-2 w-2 rounded-full bg-[#D96C8A] animate-pulse"></span>
+            <span class="text-xs font-medium uppercase tracking-wider text-stone-500">
+              Après 40 ans
+            </span>
+          </div>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl text-stone-900 tracking-tight mb-8 leading-none font-normal" style="font-family: 'Newsreader', serif;">
+            Le milieu de la vie n'est pas une crise,
+            <br class="hidden md:block">
+            <span class="italic text-[#5F6B45]">c'est une renaissance.</span>
+          </h1>
+          <p class="text-xl md:text-2xl tracking-tight max-w-xl mb-10 leading-relaxed text-stone-800 font-medium mx-auto text-center">
+            Clarifiez votre direction
+            <br>
+            pour avancer autrement, sans repartir de zéro.
+          </p>
+          <a href="#podcast" class="inline-flex px-10 py-5 bg-[#C6922E] hover:bg-[#A97823] text-white rounded-xl transition-all duration-300 shadow-xl shadow-[#C6922E]/30 hover:shadow-2xl hover:-translate-y-1 active:scale-95 items-center justify-center gap-2 group w-full sm:w-auto font-bold uppercase tracking-widest text-base">
+            Écouter le Podcast
+            <iconify-icon icon="solar:headphones-round-bold" class="text-xl group-hover:scale-110 transition-transform"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section id="presentation" class="py-24 px-6 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden border border-stone-200 shadow-xl bg-white flex items-center justify-center group">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&amp;q=80" alt="Portrait Véro Rakotoarisoa" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-stone-900/10"></div>
+        </div>
+        <div class="flex flex-col items-start text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5F6B45]/10 text-[#5F6B45] mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider">
+              De l’introspection à l’action
+            </span>
+          </div>
+          <h2 class="text-2xl md:text-3xl tracking-tight text-stone-900 font-normal mb-8 leading-tight" style="font-family: 'Newsreader', serif;">
+            Je suis Vero Rakotoarisoa.
+          </h2>
+          <div class="text-lg mb-10 space-y-4 leading-relaxed text-stone-500">
+            <p>
+              Mon parcours relie deux mondes : l’accompagnement des transitions
+              de vie, et le développement stratégique des activités
+              indépendantes.
+            </p>
+            <p>
+              Pendant des années, j’ai appris à lire les systèmes, déchiffrer
+              les enjeux et transformer le flou en décisions concrètes pour
+              aider les dirigeants et leurs équipes commerciales à optimiser
+              leurs actions et leurs résultats de vente.
+            </p>
+            <p>
+              Depuis, je me suis formée au Coaching personnel pour aussi
+              accompagner celles et ceux qui, après 40 ans, veulent comprendre
+              ce qui change, faire le tri dans leurs idées, et transformer une
+              intuition confuse en action concrète.
+            </p>
+            <p>
+              Aujourd'hui, j'offre cette double vision pour vous aider de façon
+              holistique dans votre transition personnelle et professionnelle
+              après 40 ans.
+            </p>
+            <p class="">
+              Vous voulez avancer autrement sans tout recommencer ? Travaillons
+              ensemble sur votre prochaine direction.
+            </p>
+          </div>
+          <a href="#contact" class="inline-flex px-8 py-4 bg-[#C6922E] hover:bg-[#A97823] text-white rounded-xl transition-all shadow-xl shadow-[#C6922E]/20 hover:-translate-y-1 active:scale-95 font-bold uppercase tracking-widest text-sm items-center gap-2">
+            En discuter de vive voix
+            <iconify-icon icon="solar:phone-calling-rounded-bold" class="text-xl"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flash Presentation -->
+    <section id="philosophie" class="py-32 px-6 max-w-4xl mx-auto text-center">
+      <iconify-icon icon="solar:leaf-bold-duotone" class="text-5xl text-[#5F6B45] mb-8"></iconify-icon>
+      <h2 class="text-3xl md:text-5xl tracking-tight text-stone-900 font-normal mb-8 leading-tight" style="font-family: 'Newsreader', serif;">
+        Faire moins, mais mieux. L'équilibre entre l'ambition personnelle et la
+        sérénité professionnelle existe.
+      </h2>
+      <p class="text-lg text-stone-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Mon approche se concentre sur le désencombrement mental et stratégique
+        pour vous permettre d'avancer avec clarté, alignement et vitalité.
+      </p>
+      <a href="#" class="inline-flex px-8 py-4 bg-white border-2 border-stone-200 text-stone-900 hover:border-[#5F6B45] hover:text-[#5F6B45] rounded-xl transition-colors font-bold uppercase tracking-widest text-sm items-center gap-2">
+        En savoir plus
+        <iconify-icon icon="solar:arrow-right-linear" class="text-xl"></iconify-icon>
+      </a>
+    </section>
+
+    <!-- Travailler avec moi (Asymmetric grid) -->
+    <section id="services" class="py-24 px-6 bg-[#F5EFE4] border-y border-stone-200">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl tracking-tight text-stone-900 font-normal mb-4" style="font-family: 'Newsreader', serif;">
+            3 chemins pour retrouver votre élan
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Top full width -->
+          <div class="md:col-span-2 group rounded-3xl overflow-hidden border border-stone-200 shadow-sm relative min-h-[400px] flex items-center bg-[#111111]">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&amp;q=80" alt="Sommet" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-500">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+            <div class="relative z-10 p-10 md:p-16 text-white max-w-2xl">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-6">
+                <span class="text-xs font-medium uppercase tracking-wider text-white">
+                  Événement
+                </span>
+              </div>
+              <h3 class="text-4xl md:text-5xl font-normal mb-6 leading-tight tracking-tight" style="font-family: 'Newsreader', serif;">
+                Le Sommet Virtuel de l’Audace &amp; de la Vitalité après 40 ans
+              </h3>
+              <p class="text-white/80 text-lg mb-8 font-normal">
+                Un rendez-vous inspirant avec une douzaine d'experts pour
+                redéfinir la seconde moitié de sa vie avec puissance et liberté.
+              </p>
+              <a href="#" class="inline-flex px-8 py-4 bg-white text-[#111111] hover:bg-stone-100 rounded-xl transition-all shadow-sm font-bold uppercase tracking-widest text-sm items-center gap-2">
+                Découvrir le sommet
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom left -->
+          <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm hover:border-[#D96C8A]/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D96C8A]/10 text-[#D96C8A] mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider">
+                  Solopreneuriat
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-normal text-stone-900 mb-4 leading-tight tracking-tight" style="font-family: 'Newsreader', serif;">
+                Entreprendre au Milieu de la Vie
+                <br>
+                — Le Mastermind Impulsion
+              </h3>
+              <p class="text-stone-500 leading-relaxed mb-8 text-base">
+                Un petit groupe d'avancement pour rompre la solitude, valider
+                vos choix et passer à l'action sans vous épuiser.
+              </p>
+            </div>
+            <a href="#" class="inline-flex px-8 py-4 bg-[#C6922E] hover:bg-[#A97823] text-white rounded-xl transition-all shadow-xl shadow-[#C6922E]/20 hover:-translate-y-1 active:scale-95 font-bold uppercase tracking-widest text-sm justify-center text-center">
+              Rejoindre Impulsion
+            </a>
+          </div>
+
+          <!-- Bottom right -->
+          <div class="bg-[#FFFFFF] rounded-3xl p-10 border border-[#5F6B45]/20 shadow-sm relative overflow-hidden group flex flex-col justify-between">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&amp;q=80" alt="Écoute audio" class="absolute inset-0 w-full h-full object-cover opacity-15 group-hover:opacity-25 transition-opacity duration-500 z-0">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-[#5F6B45]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div class="relative z-10">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5F6B45]/10 text-[#5F6B45] mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider">
+                  Mini-programme audio
+                </span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-normal text-stone-900 mb-4 leading-tight tracking-tight" style="font-family: 'Newsreader', serif;">
+                Désencombrement Mental
+              </h3>
+              <p class="text-stone-500 leading-relaxed mb-8 text-base">
+                7 jours pour faire le tri dans votre vie, clarifier vos envies
+                et faire de la place à votre nouvelle direction.
+              </p>
+            </div>
+
+            <div class="relative z-10 flex items-center justify-between gap-4">
+              <a href="#" class="inline-flex flex-1 px-8 py-4 bg-[#111111] hover:bg-[#222222] text-white rounded-xl transition-all shadow-xl hover:-translate-y-1 active:scale-95 font-bold uppercase tracking-widest text-sm justify-center items-center gap-3 text-center">
+                Accéder
+                <span class="bg-white/20 px-2 py-1 rounded text-xs">27 €</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden border bg-[#5F6B45] border-[#5F6B45]">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 opacity-20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 bg-[#C6922E]"></div>
+        <div class="relative z-10">
+          <iconify-icon icon="solar:letter-opened-bold" class="text-5xl text-[#C6922E] mb-6"></iconify-icon>
+          <h2 class="text-3xl md:text-5xl tracking-tight mb-6 font-normal" style="font-family: 'Newsreader', serif;">
+            La Chronique Après le Bruit
+          </h2>
+          <p class="text-lg text-white/80 mb-10 max-w-xl mx-auto font-normal">
+            Des réflexions hebdomadaires sur l'art d'entreprendre avec justesse
+            et de cultiver sa vitalité, directement dans votre boîte mail.
+          </p>
+          <div class="flex flex-col items-center mt-8 gap-4">
+            <a href="#" class="px-8 py-4 bg-[#C6922E] text-white rounded-xl transition-all shadow-sm hover:bg-[#A97823] hover:scale-105 active:scale-95 whitespace-nowrap inline-flex items-center gap-2 font-bold uppercase tracking-wide text-base">
+              Rejoindre sur Substack
+              <iconify-icon icon="solar:arrow-right-linear" class="text-xl"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources (Blog) -->
+    <section id="blog" class="py-24 px-6 max-w-7xl mx-auto border-t border-stone-100">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl tracking-tight text-stone-900 font-normal mb-4" style="font-family: 'Newsreader', serif;">
+            Ressources &amp; Réflexions
+          </h2>
+          <p class="text-lg text-stone-500 font-normal">
+            Derniers articles publiés.
+          </p>
+        </div>
+        <a href="#" class="hidden md:inline-flex items-center gap-2 text-[#5F6B45] hover:text-[#4A5335] font-semibold transition-colors">
+          Voir tout
+          <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="group cursor-pointer">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&amp;q=80" alt="Blog 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex gap-3 text-xs font-semibold text-[#D96C8A] uppercase tracking-wider mb-3">
+            <span>Vitalité</span>
+            <span>•</span>
+            <span>5 min</span>
+          </div>
+          <h3 class="text-xl font-normal text-stone-900 mb-3 group-hover:text-[#5F6B45] transition-colors tracking-tight" style="font-family: 'Newsreader', serif;">
+            Pourquoi ralentir est la meilleure décision stratégique
+          </h3>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Dans un monde qui prône la vitesse, prendre le temps de se poser
+            permet paradoxalement d'avancer plus vite.
+          </p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&amp;q=80" alt="Blog 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex gap-3 text-xs font-semibold text-[#C6922E] uppercase tracking-wider mb-3">
+            <span>Entrepreneuriat</span>
+            <span>•</span>
+            <span>7 min</span>
+          </div>
+          <h3 class="text-xl font-normal text-stone-900 mb-3 group-hover:text-[#5F6B45] transition-colors tracking-tight" style="font-family: 'Newsreader', serif;">
+            Redéfinir sa vision du succès au milieu de la vie
+          </h3>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Ce qui nous motivait à 30 ans n'est souvent plus valable à 45.
+            Comment ajuster sa boussole intérieure ?
+          </p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?w=600&amp;q=80" alt="Blog 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="flex gap-3 text-xs font-semibold text-[#5F6B45] uppercase tracking-wider mb-3">
+            <span>Mindset</span>
+            <span>•</span>
+            <span>4 min</span>
+          </div>
+          <h3 class="text-xl font-normal text-stone-900 mb-3 group-hover:text-[#5F6B45] transition-colors tracking-tight" style="font-family: 'Newsreader', serif;">
+            Le désencombrement mental : par où commencer
+          </h3>
+          <p class="text-stone-500 text-sm leading-relaxed">
+            Trois pratiques simples pour alléger votre charge mentale et
+            retrouver de l'espace pour l'essentiel.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200 py-16 px-6 bg-[#FFFFFF]">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-6 gap-8">
+        <div class="col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-6 h-6 rounded flex items-center justify-center text-white bg-[#5F6B45]">
+              <iconify-icon icon="solar:leaf-linear" class="text-xs"></iconify-icon>
+            </div>
+            <p class="text-stone-400 text-xs font-normal">
+              © 2024 Vero Rakotoarisoa. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="font-normal text-stone-900 text-sm">Services</h4>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Mastermind
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Sommet Virtuel
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Mini-Formation
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="font-normal text-stone-900 text-sm">Ressources</h4>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Podcast
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Articles
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Newsletter
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="font-normal text-stone-900 text-sm">À propos</h4>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Philosophie
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Contact
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="font-normal text-stone-900 text-sm">Légal</h4>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            Confidentialité
+          </a>
+          <a href="#" class="text-stone-500 hover:text-[#718E79] text-sm transition-colors font-normal">
+            CGV
+          </a>
+        </div>
+      </div>
+    </footer>
+  
+</body></html>

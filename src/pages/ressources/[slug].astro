@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('blog', ({ data }) => !data.draft);
+  return articles.map((article) => ({
+    params: { slug: article.id.replace('.md', '') },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<BaseLayout title={`${article.data.title} — Vero Rakotoarisoa`} description={article.data.description}>
+  <Header />
+
+  <article class="pt-32 pb-24 px-6">
+    <div class="max-w-3xl mx-auto">
+      <a href="/ressources" class="inline-flex items-center gap-1 text-primary font-medium text-sm mb-8 hover:gap-2 transition-all">
+        <iconify-icon icon="solar:arrow-left-linear" class="text-base"></iconify-icon>
+        Retour aux ressources
+      </a>
+      <div class="flex flex-wrap gap-2 mb-4">
+        {article.data.tags.map((tag: string) => (
+          <span class="text-xs font-medium uppercase tracking-wider text-stone-500 bg-stone-100 px-2 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <h1 class="text-3xl md:text-5xl tracking-tight text-stone-900 mb-8 font-normal font-serif" style="font-family: 'Newsreader', serif;">{article.data.title}</h1>
+      <div class="prose prose-stone max-w-none text-stone-600 leading-relaxed">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+</BaseLayout>
