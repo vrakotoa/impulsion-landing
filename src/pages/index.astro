@@ -1,17 +1,26 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import ComparisonSection from '../components/ComparisonSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ProgramSection from '../components/ProgramSection.astro';
+import OfferSection from '../components/OfferSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import FAQSection from '../components/FAQSection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Impulsion — Mastermind pour solopreneures" description="Rejoins le groupe d'avancement qui donne un écho à tes décisions quand tu portes seule ton activité.">
+  <Header />
+  <Hero />
+  <ProblemSection />
+  <ComparisonSection />
+  <BenefitsSection />
+  <ProgramSection />
+  <OfferSection />
+  <AboutSection />
+  <FAQSection />
+  <Footer />
+</BaseLayout>

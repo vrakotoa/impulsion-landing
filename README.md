@@ -1,43 +1,66 @@
-# Astro Starter Kit: Minimal
+# vero-rakoto.com — Site vitrine
 
-```sh
-npm create astro@latest -- --template minimal
+Site Astro du programme Impulsion, un mastermind pour solopreneures.
+
+## Structure
+
+```
+src/
+├── components/     # Sections de la page (Header, Hero, FAQ, Footer...)
+├── layouts/        # Layout principal (BaseLayout)
+├── pages/          # Routes du site (index.astro)
+├── styles/         # CSS global avec variables de design system
+public/             # Assets statiques
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commandes
 
-## 🚀 Project Structure
+| Commande | Action |
+|----------|--------|
+| `npm install` | Installer les dépendances |
+| `npm run dev` | Lancer le serveur local (port 4321) |
+| `npm run build` | Build production dans `dist/` |
+| `npm run preview` | Prévisualiser le build local |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Déploiement — Cloudflare Pages
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+### 1. Créer le repo GitHub
+
+```bash
+# Depuis le dossier du projet
+git init
+git add .
+git commit -m "Initial commit"
+# Créer un repo vierge sur github.com (sans README, sans .gitignore, sans licence)
+git remote add origin git@github.com:VERO-RAKOTO/vero-rakoto.com-site.git
+git branch -M main
+git push -u origin main
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 2. Connecter Cloudflare Pages
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. Aller sur https://dash.cloudflare.com
+2. Menu > Workers & Pages
+3. Cliquer **Create application** > **Pages**
+4. **Connect to Git**
+5. Autoriser l'accès au repo `VERO-RAKOTO/vero-rakoto.com-site`
+6. Configurer :
 
-Any static assets, like images, can be placed in the `public/` directory.
+   | Champ | Valeur |
+   |-------|--------|
+   | Framework preset | `Astro` |
+   | Build command | `npm run build` |
+   | Build output directory | `dist` |
+   | Root directory | (laisser vide) |
+   | Node.js version | `20` |
 
-## 🧞 Commands
+7. Cliquer **Save and Deploy**
 
-All commands are run from the root of the project, from a terminal:
+### 3. Déploiements automatiques
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Chaque push sur `main` déclenche un build et déploiement automatique
+- Les preview deployments sont activés automatiquement pour les PRs
 
-## 👀 Want to learn more?
+## Design System
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Voir `DESIGN-SYSTEM.md` pour la palette, la typographie, les composants et les règles de création de pages.
