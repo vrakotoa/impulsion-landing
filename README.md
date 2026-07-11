@@ -1,6 +1,6 @@
 # vero-rakoto.com — Site vitrine
 
-Site Astro du programme Impulsion, un mastermind pour solopreneures.
+Site Astro `vero-rakoto.com`. Dossier local : `Site Internet`.
 
 ## Structure
 
@@ -32,7 +32,7 @@ git init
 git add .
 git commit -m "Initial commit"
 # Créer un repo vierge sur github.com (sans README, sans .gitignore, sans licence)
-git remote add origin git@github.com:VERO-RAKOTO/vero-rakoto.com-site.git
+git remote add origin git@github.com:vrakotoa/impulsion-landing.git
 git branch -M main
 git push -u origin main
 ```
@@ -43,7 +43,7 @@ git push -u origin main
 2. Menu > Workers & Pages
 3. Cliquer **Create application** > **Pages**
 4. **Connect to Git**
-5. Autoriser l'accès au repo `VERO-RAKOTO/vero-rakoto.com-site`
+5. Autoriser l'accès au repo `vrakotoa/impulsion-landing`
 6. Configurer :
 
    | Champ | Valeur |
